@@ -1,0 +1,6 @@
+com\example\productorest\dao\ProductoDaoImp.class
+com\example\productorest\ProductorestApplication.class
+com\example\productorest\models\Producto.class
+com\example\productorest\dao\ProductoDao.class
+com\example\productorest\controllers\ProductoController.class
+com\example\productorest\ServletInitializer.class
