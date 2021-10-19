@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@RequestMapping("/api/productos")
 public class ProductoController {
 
     @Autowired
@@ -16,18 +17,18 @@ public class ProductoController {
 
 
 
-   @RequestMapping (value = "api/productos", method = RequestMethod.GET)
+   @RequestMapping (value = "/all", method = RequestMethod.GET)
     public List<Producto> getProductos(){
     return productoDao.getProductos();
 
    }
 
-   @RequestMapping(value = "api/producto", method = RequestMethod.POST)
+   @RequestMapping(value = "/add", method = RequestMethod.POST)
    public void registrarProducto(@RequestBody Producto producto){
 
      productoDao.registrar(producto);
    }
-    @RequestMapping(value = "api/producto/{id}", method = RequestMethod.DELETE)
+    @RequestMapping(value = "delete/{id}", method = RequestMethod.DELETE)
     public void eliminar( @PathVariable  int id){
      productoDao.eliminar(id);
 
